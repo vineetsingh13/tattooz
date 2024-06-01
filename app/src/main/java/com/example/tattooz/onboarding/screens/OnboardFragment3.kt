@@ -13,6 +13,7 @@ import com.example.tattooz.MainActivity
 import com.example.tattooz.R
 import com.example.tattooz.databinding.FragmentOnboard3Binding
 import com.example.tattooz.onboarding.OnboardActivity
+import com.example.tattooz.registration.LoginActivity
 
 
 class OnboardFragment3 : Fragment() {
@@ -34,7 +35,7 @@ class OnboardFragment3 : Fragment() {
 
         binding.next.setOnClickListener {
             onBoardingFinished()
-            val intent= Intent(requireActivity(), MainActivity::class.java)
+            val intent= Intent(requireActivity(), LoginActivity::class.java)
             intent.flags= Intent.FLAG_ACTIVITY_CLEAR_TASK  or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
             requireActivity().finish()

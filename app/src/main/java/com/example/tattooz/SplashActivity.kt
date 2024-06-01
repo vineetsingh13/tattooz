@@ -8,6 +8,7 @@ import android.os.Handler
 import android.os.Looper
 import com.example.tattooz.databinding.ActivitySplashBinding
 import com.example.tattooz.onboarding.OnboardActivity
+import com.example.tattooz.registration.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -23,8 +24,13 @@ class SplashActivity : AppCompatActivity() {
 
         Handler(Looper.getMainLooper()).postDelayed({
 
-            if(onBoardingFinished()){
+            if(onBoardingFinished() && SigninFinished()){
                 val intent= Intent(this, MainActivity::class.java)
+                intent.flags= Intent.FLAG_ACTIVITY_CLEAR_TASK  or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intent)
+                finish()
+            }else if(onBoardingFinished()){
+                val intent= Intent(this, LoginActivity::class.java)
                 intent.flags= Intent.FLAG_ACTIVITY_CLEAR_TASK  or Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(intent)
                 finish()
@@ -40,5 +46,10 @@ class SplashActivity : AppCompatActivity() {
     private fun onBoardingFinished(): Boolean{
         val sharedPref = getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
         return sharedPref.getBoolean("Finished", false)
+    }
+
+    private fun SigninFinished(): Boolean{
+        val sharedPref = getSharedPreferences("signin", Context.MODE_PRIVATE)
+        return sharedPref.getBoolean("Finish", false)
     }
 }
