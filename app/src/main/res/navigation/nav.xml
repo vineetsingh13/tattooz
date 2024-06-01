@@ -3,26 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav"
-    app:startDestination="@id/onboardFragment2">
+    app:startDestination="@id/viewPagerFragment">
     <fragment
-        android:id="@+id/onboardFragment2"
-        android:name="com.example.tattooz.onboarding.OnboardFragment"
-        android:label="fragment_onboard"
-        tools:layout="@layout/fragment_onboard" >
-        <action
-            android:id="@+id/action_onboardFragment2_to_onboardFragment22"
-            app:destination="@id/onboardFragment22" />
-    </fragment>
-    <fragment
-        android:id="@+id/onboardFragment22"
-        android:name="com.example.tattooz.onboarding.OnboardFragment2"
-        android:label="OnboardFragment2" >
-        <action
-            android:id="@+id/action_onboardFragment22_to_onboardFragment3"
-            app:destination="@id/onboardFragment3" />
-    </fragment>
-    <fragment
-        android:id="@+id/onboardFragment3"
-        android:name="com.example.tattooz.onboarding.OnboardFragment3"
-        android:label="OnboardFragment3" />
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.tattooz.onboarding.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" />
 </navigation>
