@@ -30,11 +30,16 @@ class MainActivity : AppCompatActivity() {
     var quantity=""
 
     private var assetUrls: MutableList<String> = mutableListOf()
+    val loading=LoadingDialog(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        if(getUserName()!=null){
+            binding.userName.text=getUserName().toString()
+        }
 
         val adapterQuality = ArrayAdapter.createFromResource(
             this,
@@ -123,9 +128,9 @@ class MainActivity : AppCompatActivity() {
         binding.generateButton.setOnClickListener {
 
             //Log.d("value",quantity+style+aspect+quality)
+            loading.startLoading()
 
             if(binding.promptText.text!!.isNotEmpty()){
-
 
                 binding.generateButton.isClickable=false
 
@@ -152,6 +157,7 @@ class MainActivity : AppCompatActivity() {
                         withContext(Dispatchers.Main) {
                             binding.generateButton.isClickable = true
                         }
+
                     }
                 }
             }else{
@@ -159,6 +165,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this,"enter text", Toast.LENGTH_SHORT).show()
             }
             hideKeyboard()
+
         }
     }
 
@@ -176,9 +183,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun getResponse(query: requestData){
 
-        runOnUiThread {
-            binding.progressbar.visibility= View.VISIBLE
-        }
+
         val service=Service.buildService(ApiInterface::class.java)
 
 
@@ -206,10 +211,7 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this@MainActivity, ListActivity::class.java)
                     intent.putStringArrayListExtra("assetUrls", ArrayList(assetUrls))
                     startActivity(intent)
-
-                    runOnUiThread {
-                        binding.progressbar.visibility=View.GONE
-                    }
+                    loading.isDismiss()
 
                 }else{
                     print(response.errorBody().toString())
@@ -222,5 +224,11 @@ class MainActivity : AppCompatActivity() {
 
         })
 
+    }
+
+
+    private fun getUserName(): String?{
+        val sharedPref = getSharedPreferences("signin", Context.MODE_PRIVATE)
+        return sharedPref.getString("NAME", "")
     }
 }
