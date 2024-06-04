@@ -39,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
     private fun navigateToSignUpScreen() {
         val intent = Intent(this@LoginActivity, SignupActivity::class.java)
         startActivity(intent)
-        finish()
+        
     }
 
     private fun navigateToMainActivity() {
