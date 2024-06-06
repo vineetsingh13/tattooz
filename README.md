@@ -18,10 +18,10 @@ Welcome to the Tattoo Artist Art Generator application! This tool is designed to
 
 ## Screenshots
 
-<img src="https://github.com/vineetsingh13/tattooz/assets/ss1" alt="Screenshot 1" width="300" height="500">
-<img src="https://github.com/vineetsingh13/tattooz/assets/ss2" alt="Screenshot 2" width="300" height="500">
-<img src="https://github.com/vineetsingh13/tattooz/assets/ss3" alt="Screenshot 3" width="300" height="500">
-<img src="https://github.com/vineetsingh13/tattooz/assets/ss4" alt="Screenshot 4" width="300" height="500">
-<img src="https://github.com/vineetsingh13/tattooz/assets/ss5" alt="Screenshot 5" width="300" height="500">
-<img src="https://github.com/vineetsingh13/tattooz/assets/ss6" alt="Screenshot 6" width="300" height="500">
-<img src="https://github.com/vineetsingh13/tattooz/assets/ss7" alt="Screenshot 7" width="300" height="500">
+<img src="https://github.com/vineetsingh13/tattooz/blob/master/assets/ss1.jpg" alt="Screenshot 1" width="300" height="550">
+<img src="https://github.com/vineetsingh13/tattooz/blob/master/assets/ss2.jpg" alt="Screenshot 2" width="300" height="550">
+<img src="https://github.com/vineetsingh13/tattooz/blob/master/assets/ss3.jpg" alt="Screenshot 3" width="300" height="550">
+<img src="https://github.com/vineetsingh13/tattooz/blob/master/assets/ss4.jpg" alt="Screenshot 4" width="300" height="550">
+<img src="https://github.com/vineetsingh13/tattooz/blob/master/assets/ss5.jpg" alt="Screenshot 5" width="300" height="550">
+<img src="https://github.com/vineetsingh13/tattooz/blob/master/assets/ss6.jpg" alt="Screenshot 6" width="300" height="550">
+<img src="https://github.com/vineetsingh13/tattooz/blob/master/assets/ss7.jpg" alt="Screenshot 7" width="300" height="550">
