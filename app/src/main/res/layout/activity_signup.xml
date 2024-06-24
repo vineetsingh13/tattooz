@@ -163,4 +163,23 @@
         android:padding="16dp"/>
 
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/googleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LoginButton"
+        android:text="SignIn with Google"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:icon="@drawable/baseline_android_24"
+        app:iconSize="25dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/cards"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
