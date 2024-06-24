@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "798625780236",
+    "project_id": "tattooz",
+    "storage_bucket": "tattooz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798625780236:android:0a2241429fc1c5a0bbd429",
+        "android_client_info": {
+          "package_name": "com.example.tattooz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798625780236-cs8e5gabitp08gbu71nlep4let5jjf6g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tattooz",
+            "certificate_hash": "f4b3385be723d163697ec183c232003be4868188"
+          }
+        },
+        {
+          "client_id": "798625780236-oqrl4fte229miqgvcqmnoe2s07gniif4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACWW5YAk49PT-jtEBLnfN_2Vhub-GGMKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798625780236-oqrl4fte229miqgvcqmnoe2s07gniif4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
